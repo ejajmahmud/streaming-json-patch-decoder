@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "streaming-json-patch-decoder"
+version = "0.1.0"
+description = "Incremental streaming JSON patch decoder emitting valid partial object updates as tokens stream from the model"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+streaming-json-patch-decoder = "streaming_json_patch_decoder.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["streaming_json_patch_decoder*"]
